@@ -204,7 +204,30 @@
   </div>
 
   <div class="row">
+    
+    <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .settings-icon {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <i class="fas fa-cog settings-icon" id="settingsIcon"></i>
 
+  <script>
+    const settingsIcon = document.getElementById("settingsIcon");
+    settingsIcon.addEventListener("click", function() {
+      window.open("https://github.com/Sinho09?tab=repositories", "_blank");
+    });
+  </script>   
+  
   <!-- Repita a estrutura acima para adicionar mais imagens -->
 
 </body>
