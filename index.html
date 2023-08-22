@@ -3,38 +3,53 @@
 <head>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/561/561238.png">
   <title>Favoritos</title>
-</head>
-<body>
   <style>
     /* Estilos CSS para a aparência das imagens e descrições */
     body {
-      text-align: center;
-      background-color: #181a1b; /* Cor de fundo escura */
-      color: #ffffff; /* Cor do texto */
+      text-align: center; /* Centraliza o conteúdo horizontalmente */
+      background-color: #181a1b; /* Define a cor de fundo escura */
+      color: #ffffff; /* Define a cor do texto */
     }
     .imagem {
-      display: inline-block;
-      margin: 10px;
-      text-align: center; /* Alinha os itens horizontalmente */
-      vertical-align: top; /* Alinha as imagens no topo */
+      display: inline-block; /* Permite o alinhamento lado a lado */
+      margin: 10px; /* Define a margem ao redor das imagens */
+      vertical-align: top; /* Alinha as imagens no topo da linha */
+      perspective: 1000px; /* Cria perspectiva para o efeito 3D */
     }
     .imagem img {
-      width: 128px; /* Define o tamanho da imagem como um ícone de 128x128 pixels */
+      width: 128px; /* Define o tamanho da imagem */
       height: 128px;
-      border-radius: 15%; /* Deixa as imagens arredondadas */
+      border-radius: 15%; /* Deixa as imagens arredondadas nas bordas */
+      transition: transform 0.3s ease; /* Adiciona transição suave ao efeito de zoom */
     }
     .descricao {
-      text-align: center;
       font-size: 16px; /* Define o tamanho da fonte da descrição */
       max-width: 180px; /* Define a largura máxima da descrição */
-      margin-top: 8px; /* Espaço entre a imagem e a descrição */
-      margin-bottom: 16px; /* Espaço abaixo da descrição */
-      overflow-wrap: break-word; /* Quebra as palavras longas */
+      margin-top: 8px; /* Define o espaço acima da descrição */
+      margin-bottom: 19px; /* Define o espaço abaixo da descrição */
+      overflow-wrap: break-word; /* Quebra palavras longas na descrição */
+      opacity: 0; /* Inicia com opacidade 0 para a animação */
+      transform: translateY(13px); /* Move a descrição abaixo da imagem */
+      transition: transform 0.3s ease, opacity 0.3s ease; /* Adiciona transições suaves */
+    }
+
+    /* Efeito de hover nas imagens e descrições */
+    .imagem:hover img {
+      transform: scale(1.1); /* Aumenta ligeiramente o tamanho da imagem */
+    }
+
+    .imagem:hover .descricao {
+      transform: translateY(0); /* Move a descrição para cima */
+      opacity: 1; /* Torna a descrição visível */
     }
   </style>
 </head>
 <body>
+
   <h1>Favoritos</h1>
+  <!-- Aqui você pode adicionar seu conteúdo HTML, como as imagens e descrições -->
+</body>
+</html>
 
   <div class="imagem">
     <a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home">
@@ -228,7 +243,7 @@
     <a href="https://codenames.game/"Imagem 26">
       <img src="https://bestfamilyboardgames.com/wp-content/uploads/2018/04/Codenames-1.jpg">
     </a>
-    <p class="descricao">Uma versão online do popular jogo de tabuleiro Codenames..</p>
+    <p class="descricao">Uma versão online do popular jogo de tabuleiro Codenames.</p>
   </div>
     
   <div class="row">
